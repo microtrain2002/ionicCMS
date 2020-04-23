@@ -37,4 +37,8 @@ export class ArticlesService {
     return this.http.get<Article>(`${this.url}/${id}`, httpOptions);
   }
 
+  updateArticle(user: Article): Observable<Article>{
+    return this.http.put<Article>(this.url, user, httpOptions);
+  }
+
 }
