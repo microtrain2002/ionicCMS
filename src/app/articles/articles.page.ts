@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from '../articles.service';
 import { Article } from '../article.model';
+
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.page.html',
@@ -9,10 +11,16 @@ import { Article } from '../article.model';
 export class ArticlesPage implements OnInit {
   articles:Article;
 
-  constructor(private articlesService:ArticlesService) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private articlesService:ArticlesService,
+    private router: Router
+    ) {}
 
   ngOnInit() {
-    this.getArticles();
+    this.activatedRoute.params.subscribe(params=>{
+      this.getArticles();
+    });
   }
 
   public getArticles(): void{
@@ -23,5 +31,6 @@ export class ArticlesPage implements OnInit {
       }
     );
   }
+
 
 }

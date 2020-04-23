@@ -37,8 +37,12 @@ export class ArticlesService {
     return this.http.get<Article>(`${this.url}/${id}`, httpOptions);
   }
 
-  updateArticle(user: Article): Observable<Article>{
-    return this.http.put<Article>(this.url, user, httpOptions);
+  createArticle(article: Article): Observable<Article> {
+    return this.http.post<Article>(this.url, article, httpOptions);
+  }
+
+  updateArticle(article: Article): Observable<Article>{
+    return this.http.put<Article>(this.url, article, httpOptions);
   }
 
   deleteArticle(id:String): Observable<Article> {
