@@ -41,4 +41,8 @@ export class ArticlesService {
     return this.http.put<Article>(this.url, user, httpOptions);
   }
 
+  deleteArticle(id:String): Observable<Article> {
+    return this.http.delete<Article>(`${this.url}/${id}`, httpOptions);
+  }
+
 }
