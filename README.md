@@ -61,6 +61,7 @@ An article service
 * an article-delete page
 
 Style and edit functionality of the app as needed.
-https://ionicframework.com/docs/api/menu
-https://ionicframework.com/docs/theming/themes
-https://ionicons.com/
+[MENU](https://ionicframework.com/docs/api/menu)\
+[THEME](https://ionicframework.com/docs/theming/themes)\
+[ICONS](https://ionicons.com/)
+
