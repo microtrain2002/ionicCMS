@@ -60,7 +60,7 @@ An article service
 * an article-edit page
 * an article-delete page
 
-Style and edit functionality of the app as needed.
+Style and edit functionality of the app as needed.\
 [MENU](https://ionicframework.com/docs/api/menu)\
 [THEME](https://ionicframework.com/docs/theming/themes)\
 [ICONS](https://ionicons.com/)
